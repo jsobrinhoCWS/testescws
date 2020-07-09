@@ -1,7 +1,7 @@
 *** Settings ***
 Resource            ../resource/Resource.robot
 Test Setup          Abrir navegador
-# Test Teardown       Fechar navegador
+Test Teardown       Fechar navegador
 
 ### SETUP ele roda keyword antes da Suite ou antes de um teste
 ### TEARDOWN ele roda keyword depois de uma Suite ou um teste
