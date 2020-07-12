@@ -17,7 +17,7 @@ ${ADD-CARRINHO}     xpath=//*[@id="button-submit-cart-footer"]
 ${SEL-PROD}         css=#wrapper > div.highlight-products-section > div.go-home-container.clearfix.container > div > div > div > div > div.owl-stage-outer > div > div:nth-child(2)
 ${BOT-FRETE}        xpath=//*[@id="content"]/div[2]/form/div/div[2]/div[2]/button
 ${BOT-FORMA-PAG}    xpath=//*[@id="finalize-payment"]
-${BOT-FORMA-ENTR}   id: radio35120
+${BOT-FORMA-ENTR}   xpath=/html/body/div[1]/main/form/div[1]/div[2]/div/div[2]/div/div[1]/label/input
 ${BOLETO-BANC}      xpath=//*[@id="boleto-tab"]/a
 ${FINAL-PEDIDO}     xpath=//*[@id="template"]/div[1]/div[1]/section/div[2]/a
 
