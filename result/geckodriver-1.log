@@ -1,0 +1,20 @@
+1603385263232	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jsobr\\AppData\\Local\\Temp\\rust_mozprofilefCHShr"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 697))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 351))
+1603385278808	Marionette	INFO	Listening on port 49370
+1603385279029	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://tocaobra.sandbox.clubecdp.com.br/assets/theme-3/checkout_v2-d45c85b88698d2a24fd4b1c6bc9b75a3.js, line 202: TypeError: l.apply is not a function
+1603385324545	Marionette	INFO	Stopped listening on port 49370
+JavaScript error: https://www.googletagmanager.com/gtm.js?id=GTM-WFLDRKF line 3 > eval, line 3: NS_ERROR_UNEXPECTED: 
+JavaScript error: https://www.googletagmanager.com/gtm.js?id=GTM-WFLDRKF, line 2053: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://www.googletagmanager.com/gtm.js?id=GTM-WFLDRKF line 3 > eval, line 3: NS_ERROR_UNEXPECTED: 
+JavaScript error: https://www.googletagmanager.com/gtm.js?id=GTM-WFLDRKF, line 2053: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

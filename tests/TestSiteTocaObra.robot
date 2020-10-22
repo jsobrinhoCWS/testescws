@@ -1,5 +1,5 @@
 *** Settings ***
-Resource            ../resource/Resource.robot
+Resource            ../resource/ResourceTocaObra.robot
 Test Setup          Abrir navegador
 Test Teardown       Fechar navegador
 
@@ -24,12 +24,57 @@ Cenário 01: Pedido de compra Logado
     Quando eu seleciona aba "Boleto Bancário" e finaliza compra
     Então sistema direciona para página de Sucesso
 
-#
-# Cenário 02: Pedido de compra Não Logado
-#     Dado que estou na página home do site
-#     Quando selecionar um produto
-#     Então direciona o cliente para a página de ficha de produto
+Cenário 02: Pedido de compra Deslogado
+    Dado que estou na página home do site
+    Quando eu selecionar um produto
+    Então sistema direciona para página do produto
+    Quando eu seleciona botão "Adicionar ao Carrinho"
+    Então sistema direciona para página de Carrinho
+    Quando eu seleciona botão "Finalizar Compra"
+    Então direciona o cliente para a página de login
+    Quando informo os dados do login
+    Então sistema direciona para página de Carrinho logado
+    Quando eu seleciona botão "Finalizar Compra"
+    Então sistema direciona para página de Escolha o frete
+    Quando eu seleciona botão "Ir para forma de pagamento"
+    Então sistema direciona para página de forma de pagamento
+    Quando eu seleciona aba "Boleto Bancário" e finaliza compra
+    Então sistema direciona para página de Sucesso
 
+Cenário 03: Pedido de compra 3 produtos
+    Dado que estou na página home do site
+    Quando eu selecionar um produto
+    Então sistema direciona para página do produto
+    Quando eu seleciona botão "Adicionar ao Carrinho"
+    Então sistema direciona para página de Carrinho
+    Quando eu seleciona botão "Finalizar Compra"
+    Então direciona o cliente para a página de login
+    Quando informo os dados do login
+    Então sistema direciona para página de Carrinho logado
+    Quando eu seleciona botão "Finalizar Compra"
+    Então sistema direciona para página de Escolha o frete
+    Quando eu seleciona botão "Ir para forma de pagamento"
+    Então sistema direciona para página de forma de pagamento
+    Quando eu seleciona aba "Boleto Bancário" e finaliza compra
+    Então sistema direciona para página de Sucesso
+
+Cenário 04: Pedido de compra com cupom
+    Dado que estou na página home do site
+    Quando eu selecionar um produto
+    Então sistema direciona para página do produto
+    Quando eu seleciona botão "Adicionar ao Carrinho"
+    Então sistema direciona para página de Carrinho
+    Quando eu seleciona botão "Finalizar Compra"
+    Então direciona o cliente para a página de login
+    Quando informo os dados do login
+    Então sistema direciona para página de Carrinho logado
+    Quando eu seleciona botão "Finalizar Compra"
+    Então sistema direciona para página de Escolha o frete
+    Quando eu seleciona botão "Ir para forma de pagamento"
+    Então sistema direciona para página de forma de pagamento
+    Quando eu seleciona aba "Boleto Bancário" e finaliza compra
+    Então sistema direciona para página de Sucesso
+    
 *** Keywords ***
 Dado que estou na página home do site
     Acessar a página home do site
@@ -62,6 +107,9 @@ Então sistema direciona para página de Carrinho
 
 Quando eu seleciona botão "Finalizar Compra"
     Seleciona o botão "Finalizar Compra"
+
+Então sistema direciona para página de Carrinho logado
+        Verifica página logado carrinho
 
 Então sistema direciona para página de Escolha o frete
     Verifica página de Escolha o frete
