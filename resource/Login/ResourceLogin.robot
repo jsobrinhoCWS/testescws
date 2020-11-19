@@ -3,7 +3,7 @@ Library             SeleniumLibrary
 
 *** Variables ***
 ##BROWSER##
-${BROWSER-FIREFOX}  firefox
+${BROWSER-FIREFOX}   firefox
 
 ##URL##
 ${URL-TOCAOBRA}     https://tocaobra.sandbox.clubecdp.com.br/login?targetUri=%2F
