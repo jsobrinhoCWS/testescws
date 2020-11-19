@@ -1,923 +1,969 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20201022 13:47:39.436" rpa="false">
-<suite id="s1" name="TestSiteTocaObra" source="C:\Projetos\SuiteTeste(TocaObra)\tests\TestSiteTocaObra.robot">
-<test id="s1-t1" name="Cenário 01: Pedido de compra Logado">
-<kw name="Abrir navegador" library="ResourceTocaObra" type="setup">
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20201117 18:02:46.357" rpa="false">
+<suite id="s1" name="TestLoginRivesa" source="C:\Projetos\SuiteTeste(TocaObra)\tests\TestLoginRivesa.robot">
+<test id="s1-t1" name="Cenário 01: Login de acesso Rivesa com Email">
+<kw name="Abrir navegador" library="ResourceLogin" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>${BROWSER}</arg>
+<arg>${BROWSER-FIREFOX}</arg>
 </arguments>
-<msg timestamp="20201022 13:47:39.870" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20201022 13:47:39.977" level="INFO">Firefox driver log is always forced to to: C:\Projetos\SuiteTeste(TocaObra)\result\geckodriver-1.log</msg>
-<status status="PASS" starttime="20201022 13:47:39.870" endtime="20201022 13:47:59.437"></status>
+<msg timestamp="20201117 18:02:46.797" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20201117 18:02:46.814" level="INFO">Firefox driver log is always forced to to: C:\Projetos\SuiteTeste(TocaObra)\result\geckodriver-1.log</msg>
+<status status="PASS" starttime="20201117 18:02:46.796" endtime="20201117 18:03:00.100"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201022 13:47:59.438" endtime="20201022 13:47:59.441"></status>
+<status status="PASS" starttime="20201117 18:03:00.100" endtime="20201117 18:03:00.114"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:47:39.869" endtime="20201022 13:47:59.441"></status>
+<status status="PASS" starttime="20201117 18:02:46.796" endtime="20201117 18:03:00.115"></status>
 </kw>
-<kw name="Dado que estou na página home do site">
-<kw name="Acessar a página home do site" library="ResourceTocaObra">
+<kw name="Dado que estou na página home do login">
+<kw name="Acessar a página de login do site (Rivesa)" library="ResourceLogin">
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
-<arg>${URL}</arg>
+<arg>${URL-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:47:59.443" level="INFO">Opening url 'https://tocaobra.sandbox.clubecdp.com.br'</msg>
-<status status="PASS" starttime="20201022 13:47:59.443" endtime="20201022 13:48:08.145"></status>
+<msg timestamp="20201117 18:03:00.120" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/login?targetUri=%2F'</msg>
+<status status="PASS" starttime="20201117 18:03:00.119" endtime="20201117 18:03:03.285"></status>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>Toca Obra</arg>
-</arguments>
-<msg timestamp="20201022 13:48:08.158" level="INFO">Page title is 'Toca Obra'.</msg>
-<status status="PASS" starttime="20201022 13:48:08.145" endtime="20201022 13:48:08.158"></status>
+<status status="PASS" starttime="20201117 18:03:00.118" endtime="20201117 18:03:03.285"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:47:59.442" endtime="20201022 13:48:08.158"></status>
+<status status="PASS" starttime="20201117 18:03:00.117" endtime="20201117 18:03:03.285"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:47:59.442" endtime="20201022 13:48:08.159"></status>
-</kw>
-<kw name="Quando eu selecionar o link &quot;Entre&quot;">
-<kw name="Clicar na opção do link &quot;Entre&quot;" library="ResourceTocaObra">
+<kw name="Quando selecionar o link &quot;Login&quot;">
+<kw name="Clicar na opção de &quot;Login&quot; (Rivesa)" library="ResourceLogin">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${LINK}</arg>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:48:08.162" level="INFO">Clicking element 'xpath=//*[@id="wrapper"]/header/nav[1]//div/div[2]/a[1]'.</msg>
-<status status="PASS" starttime="20201022 13:48:08.161" endtime="20201022 13:48:10.799"></status>
+<msg timestamp="20201117 18:03:03.289" level="INFO">Clicking element 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:03:03.288" endtime="20201117 18:03:03.560"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:08.160" endtime="20201022 13:48:10.799"></status>
+<status status="PASS" starttime="20201117 18:03:03.288" endtime="20201117 18:03:03.560"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:08.159" endtime="20201022 13:48:10.800"></status>
+<status status="PASS" starttime="20201117 18:03:03.286" endtime="20201117 18:03:03.560"></status>
 </kw>
 <kw name="Então direciona o cliente para a página de login">
-<kw name="Verifica a página de login" library="ResourceTocaObra">
+<kw name="Verifica a página de login (Rivesa)" library="ResourceLogin">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>15 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20201022 13:48:10.805" endtime="20201022 13:48:10.814"></status>
+<status status="PASS" starttime="20201117 18:03:03.562" endtime="20201117 18:03:03.565"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>id: loginForm</arg>
 </arguments>
-<status status="PASS" starttime="20201022 13:48:10.814" endtime="20201022 13:48:10.880"></status>
+<status status="PASS" starttime="20201117 18:03:03.565" endtime="20201117 18:03:03.647"></status>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
 <arguments>
-<arg>xpath=//*[@id="login"]/div/a/img[@src="${IMG-LOGO}"]</arg>
+<arg>xpath=//*[@id="login"]/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
 </arguments>
-<msg timestamp="20201022 13:48:10.906" level="INFO">Current page contains image 'xpath=//*[@id="login"]/div/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/toca-obra.jpg"]'.</msg>
-<status status="PASS" starttime="20201022 13:48:10.881" endtime="20201022 13:48:10.907"></status>
+<msg timestamp="20201117 18:03:03.660" level="INFO">Current page contains image 'xpath=//*[@id="login"]/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:03.647" endtime="20201117 18:03:03.660"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:10.804" endtime="20201022 13:48:10.907"></status>
+<status status="PASS" starttime="20201117 18:03:03.561" endtime="20201117 18:03:03.660"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:10.803" endtime="20201022 13:48:10.907"></status>
+<status status="PASS" starttime="20201117 18:03:03.561" endtime="20201117 18:03:03.661"></status>
 </kw>
-<kw name="Quando informo os dados do login">
-<kw name="Informe campo Email" library="ResourceTocaObra">
+<kw name="Quando informo os dados do login com Email">
+<kw name="Informe campo Email (Rivesa)" library="ResourceLogin">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
+<arg>${EMAIL-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:03.663" level="INFO">Typing text 'campomourao@rivesa.com.br' into text field 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:03:03.662" endtime="20201117 18:03:03.783"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:03.662" endtime="20201117 18:03:03.783"></status>
+</kw>
+<kw name="Informe campo Senha Email (Rivesa)" library="ResourceLogin">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${CAMPO-EMAIL}</arg>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:48:10.908" level="INFO">Clicking element 'xpath=//*[@id="username"]'.</msg>
-<status status="PASS" starttime="20201022 13:48:10.908" endtime="20201022 13:48:11.154"></status>
+<msg timestamp="20201117 18:03:03.784" level="INFO">Clicking element 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:03:03.783" endtime="20201117 18:03:04.013"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${CAMPO-EMAIL}</arg>
-<arg>${EMAIL}</arg>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
+<arg>${SENHA-CNPJ-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:48:11.156" level="INFO">Typing text 'jsobrinho87@gmail.com' into text field 'xpath=//*[@id="username"]'.</msg>
-<status status="PASS" starttime="20201022 13:48:11.155" endtime="20201022 13:48:11.254"></status>
+<msg timestamp="20201117 18:03:04.014" level="INFO">Typing text 'mudar123!' into text field 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:03:04.014" endtime="20201117 18:03:04.038"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:10.908" endtime="20201022 13:48:11.254"></status>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201117 18:03:04.146" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201117 18:03:04.038" endtime="20201117 18:03:04.146"></status>
 </kw>
-<kw name="Informe campo Senha" library="ResourceTocaObra">
+<status status="PASS" starttime="20201117 18:03:03.783" endtime="20201117 18:03:04.147"></status>
+</kw>
+<kw name="Seleciona botão &quot;Fazer login&quot; (Rivesa)" library="ResourceLogin">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${CAMPO-SENHA}</arg>
+<arg>${BOTAO-LOGIN-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:48:11.256" level="INFO">Clicking element 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20201022 13:48:11.255" endtime="20201022 13:48:11.511"></status>
+<msg timestamp="20201117 18:03:04.148" level="INFO">Clicking element 'xpath=//*[@id="submit"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:04.147" endtime="20201117 18:03:04.390"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${CAMPO-SENHA}</arg>
-<arg>${SENHA}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:11.513" level="INFO">Typing text 'testecws' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20201022 13:48:11.512" endtime="20201022 13:48:11.605"></status>
+<status status="PASS" starttime="20201117 18:03:04.147" endtime="20201117 18:03:04.391"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:11.254" endtime="20201022 13:48:11.606"></status>
-</kw>
-<kw name="Seleciona botão &quot;Fazer login&quot;" library="ResourceTocaObra">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOTAO-LOGIN}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:11.607" level="INFO">Clicking element 'xpath=//*[@id="submit"]'.</msg>
-<status status="PASS" starttime="20201022 13:48:11.607" endtime="20201022 13:48:12.005"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:11.606" endtime="20201022 13:48:12.006"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:10.907" endtime="20201022 13:48:12.006"></status>
+<status status="PASS" starttime="20201117 18:03:03.661" endtime="20201117 18:03:04.391"></status>
 </kw>
 <kw name="Então sistema direciona para página home">
-<kw name="Verifica página logado Home" library="ResourceTocaObra">
+<kw name="Verifica página logado Home (Rivesa)" library="ResourceLogin">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
-<arg>15 seconds</arg>
+<arg>30 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20201022 13:48:12.007" endtime="20201022 13:48:12.010"></status>
+<status status="PASS" starttime="20201117 18:03:04.393" endtime="20201117 18:03:04.397"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@id="wrapper"]/section/h2</arg>
+<arg>xpath=//*[@id="wrapper"]/header/nav[3]</arg>
 </arguments>
-<status status="PASS" starttime="20201022 13:48:12.010" endtime="20201022 13:48:19.719"></status>
+<status status="PASS" starttime="20201117 18:03:04.398" endtime="20201117 18:03:10.877"></status>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
 <arguments>
-<arg>xpath=//*[@id="logo"]/h1/a/img[@src="${IMG-LOGO}"]</arg>
+<arg>xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
 </arguments>
-<msg timestamp="20201022 13:48:19.898" level="INFO">Current page contains image 'xpath=//*[@id="logo"]/h1/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/toca-obra.jpg"]'.</msg>
-<status status="PASS" starttime="20201022 13:48:19.719" endtime="20201022 13:48:19.899"></status>
+<msg timestamp="20201117 18:03:11.006" level="INFO">Current page contains image 'xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:10.877" endtime="20201117 18:03:11.007"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:12.007" endtime="20201022 13:48:19.899"></status>
+<status status="PASS" starttime="20201117 18:03:04.393" endtime="20201117 18:03:11.008"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:12.006" endtime="20201022 13:48:19.899"></status>
+<status status="PASS" starttime="20201117 18:03:04.392" endtime="20201117 18:03:11.009"></status>
 </kw>
-<kw name="Quando eu selecionar um produto">
-<kw name="Seleciona um produto" library="ResourceTocaObra">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
+<kw name="Então acessa a página meu perfil">
+<kw name="Acessar a página de meu perfil (Rivesa)" library="ResourceLogin">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
-<arg>${SEL-PROD}</arg>
+<arg>${URL-RIVESA-PERFIL}</arg>
 </arguments>
-<msg timestamp="20201022 13:48:19.902" level="INFO">Clicking element 'css=#wrapper &gt; div.highlight-products-section &gt; div.go-home-container.clearfix.container &gt; div &gt; div &gt; div &gt; div &gt; div.owl-stage-outer &gt; div &gt; div:nth-child(2)'.</msg>
-<status status="PASS" starttime="20201022 13:48:19.902" endtime="20201022 13:48:24.207"></status>
+<msg timestamp="20201117 18:03:11.017" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/minha-conta/meu-perfil'</msg>
+<status status="PASS" starttime="20201117 18:03:11.017" endtime="20201117 18:03:15.961"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:19.901" endtime="20201022 13:48:24.207"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:19.900" endtime="20201022 13:48:24.208"></status>
-</kw>
-<kw name="Então sistema direciona para página do produto">
-<kw name="Verifica página de ficha do produto" library="ResourceTocaObra">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>15 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20201022 13:48:24.210" endtime="20201022 13:48:24.298"></status>
+<status status="PASS" starttime="20201117 18:03:15.961" endtime="20201117 18:03:15.965"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:11.016" endtime="20201117 18:03:15.966"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:11.015" endtime="20201117 18:03:15.966"></status>
+</kw>
+<kw name="Então valida página de sucesso">
+<kw name="Valida página de sucesso (Rivesa)" library="ResourceLogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div/div/div/header/h1</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:15.967" endtime="20201117 18:03:18.653"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>${TEXT-PRODUTO}</arg>
+<arg>xpath=//*[@id="app"]/div/div/div/div/section/div</arg>
 </arguments>
-<status status="PASS" starttime="20201022 13:48:24.298" endtime="20201022 13:48:24.439"></status>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<arguments>
-<arg>${DETALHES}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:24.457" level="INFO">Current page contains element 'id: detalhes'.</msg>
-<status status="PASS" starttime="20201022 13:48:24.439" endtime="20201022 13:48:24.458"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:24.209" endtime="20201022 13:48:24.458"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:24.208" endtime="20201022 13:48:24.458"></status>
-</kw>
-<kw name="Quando eu seleciona botão &quot;Adicionar ao Carrinho&quot;">
-<kw name="Seleciona o botão &quot;Adicionar ao Carrinho&quot;" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:24.460" endtime="20201022 13:48:24.471"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BUTTON-ACEITE}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:24.472" level="INFO">Clicking element 'id: div-cookieTerms-float-button'.</msg>
-<status status="PASS" starttime="20201022 13:48:24.471" endtime="20201022 13:48:24.767"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${ADD-CARRINHO}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:24.769" level="INFO">Clicking element 'xpath=//*[@id="button-add-to-cart"]'.</msg>
-<status status="PASS" starttime="20201022 13:48:24.767" endtime="20201022 13:48:28.509"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:24.460" endtime="20201022 13:48:28.510"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:24.459" endtime="20201022 13:48:28.510"></status>
-</kw>
-<kw name="Então sistema direciona para página de Carrinho">
-<kw name="Verifica página do Carrinho" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:28.512" endtime="20201022 13:48:28.519"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="content"]/div[1]/h3/div</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:28.519" endtime="20201022 13:48:28.618"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:28.511" endtime="20201022 13:48:28.619"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:28.511" endtime="20201022 13:48:28.619"></status>
-</kw>
-<kw name="Quando eu seleciona botão &quot;Finalizar Compra&quot;">
-<kw name="Seleciona o botão &quot;Finalizar Compra&quot;" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:28.620" endtime="20201022 13:48:28.626"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=/html/body/div[1]/footer/article/form/input[1]</arg>
-</arguments>
-<msg timestamp="20201022 13:48:28.627" level="INFO">Clicking element 'xpath=/html/body/div[1]/footer/article/form/input[1]'.</msg>
-<status status="PASS" starttime="20201022 13:48:28.627" endtime="20201022 13:48:28.914"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:28.915" endtime="20201022 13:48:28.922"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOT-FRETE}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:28.923" level="INFO">Clicking element 'xpath=/html/body/div[1]/main/div/div[2]/form/div/div[2]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201022 13:48:28.922" endtime="20201022 13:48:33.369"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:28.620" endtime="20201022 13:48:33.369"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:28.620" endtime="20201022 13:48:33.369"></status>
-</kw>
-<kw name="Então sistema direciona para página de Escolha o frete">
-<kw name="Verifica página de Escolha o frete" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:33.371" endtime="20201022 13:48:33.375"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOT-FORMA-ENTR}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:33.376" level="INFO">Clicking element 'xpath=/html/body/div[1]/main/form/div[1]/div[2]/div/div[2]/div/div[1]/label/input'.</msg>
-<status status="PASS" starttime="20201022 13:48:33.375" endtime="20201022 13:48:33.754"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:33.371" endtime="20201022 13:48:33.754"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:33.370" endtime="20201022 13:48:33.754"></status>
-</kw>
-<kw name="Quando eu seleciona botão &quot;Ir para forma de pagamento&quot;">
-<kw name="Seleciona o botão &quot;Ir para forma de pagamento&quot;" library="ResourceTocaObra">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>id: order-resume</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:33.756" endtime="20201022 13:48:33.791"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>id: singleFooter</arg>
-</arguments>
-<msg timestamp="20201022 13:48:33.791" level="INFO">Clicking element 'id: singleFooter'.</msg>
-<status status="PASS" starttime="20201022 13:48:33.791" endtime="20201022 13:48:34.055"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOT-FORMA-PAG}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:34.056" level="INFO">Clicking element 'id: finalize-payment'.</msg>
-<status status="PASS" starttime="20201022 13:48:34.056" endtime="20201022 13:48:39.311"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:33.756" endtime="20201022 13:48:39.313"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:33.755" endtime="20201022 13:48:39.314"></status>
-</kw>
-<kw name="Então sistema direciona para página de forma de pagamento">
-<kw name="Verifica página de forma de pagamento" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>120 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:39.322" endtime="20201022 13:48:39.329"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="template"]/div[1]/div/div</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:39.329" endtime="20201022 13:48:39.398"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:39.320" endtime="20201022 13:48:39.398"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:39.318" endtime="20201022 13:48:39.399"></status>
-</kw>
-<kw name="Quando eu seleciona aba &quot;Boleto Bancário&quot; e finaliza compra">
-<kw name="Seleciona aba &quot;Boleto Bancário&quot; e finaliza compra" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>120 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:39.400" endtime="20201022 13:48:39.405"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOLETO-BANC}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:39.405" level="INFO">Clicking element 'id: boleto-tab'.</msg>
-<status status="PASS" starttime="20201022 13:48:39.405" endtime="20201022 13:48:39.671"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>id: singleFooter</arg>
-</arguments>
-<msg timestamp="20201022 13:48:39.671" level="INFO">Clicking element 'id: singleFooter'.</msg>
-<status status="PASS" starttime="20201022 13:48:39.671" endtime="20201022 13:48:39.908"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:39.909" endtime="20201022 13:48:39.918"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${FINAL-PEDIDO}</arg>
-</arguments>
-<msg timestamp="20201022 13:48:39.920" level="INFO">Clicking element 'xpath=//*[@id="template"]/div[1]/div[1]/section/div[2]/a'.</msg>
-<status status="PASS" starttime="20201022 13:48:39.918" endtime="20201022 13:48:40.346"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:39.400" endtime="20201022 13:48:40.346"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:48:39.399" endtime="20201022 13:48:40.347"></status>
-</kw>
-<kw name="Então sistema direciona para página de Sucesso">
-<kw name="Verifica página de sucesso" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:40.350" endtime="20201022 13:48:40.354"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="wrapper"]/main/div[1]/div[1]/div/div/div[2]/h2</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:40.355" endtime="20201022 13:48:43.825"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="wrapper"]/main/div[1]/div[1]/div/div/div[2]/p[1]/strong</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:48:43.826" endtime="20201022 13:48:43.887"></status>
+<status status="PASS" starttime="20201117 18:03:18.654" endtime="20201117 18:03:18.752"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20201022 13:48:44.518" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201022 13:48:43.888" endtime="20201022 13:48:44.518"></status>
+<msg timestamp="20201117 18:03:18.991" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201117 18:03:18.752" endtime="20201117 18:03:18.991"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:40.349" endtime="20201022 13:48:44.519"></status>
+<status status="PASS" starttime="20201117 18:03:15.967" endtime="20201117 18:03:18.991"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:40.348" endtime="20201022 13:48:44.519"></status>
+<status status="PASS" starttime="20201117 18:03:15.966" endtime="20201117 18:03:18.992"></status>
 </kw>
-<kw name="Fechar navegador" library="ResourceTocaObra" type="teardown">
+<kw name="Fechar navegador" library="ResourceLogin" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201022 13:48:44.527" endtime="20201022 13:48:45.980"></status>
+<status status="PASS" starttime="20201117 18:03:19.016" endtime="20201117 18:03:20.543"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:44.526" endtime="20201022 13:48:45.980"></status>
+<status status="PASS" starttime="20201117 18:03:19.015" endtime="20201117 18:03:20.543"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:47:39.868" endtime="20201022 13:48:45.985" critical="yes"></status>
+<status status="PASS" starttime="20201117 18:02:46.794" endtime="20201117 18:03:20.544" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Cenário 02: Pedido de compra Deslogado">
-<kw name="Abrir navegador" library="ResourceTocaObra" type="setup">
+<test id="s1-t2" name="Cenário 02: Login de acesso Rivesa com CPF">
+<kw name="Abrir navegador" library="ResourceLogin" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>${BROWSER}</arg>
+<arg>${BROWSER-FIREFOX}</arg>
 </arguments>
-<msg timestamp="20201022 13:48:45.999" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20201022 13:48:46.000" level="INFO">Firefox driver log is always forced to to: C:\Projetos\SuiteTeste(TocaObra)\result\geckodriver-2.log</msg>
-<status status="PASS" starttime="20201022 13:48:45.998" endtime="20201022 13:48:54.061"></status>
+<msg timestamp="20201117 18:03:20.553" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20201117 18:03:20.556" level="INFO">Firefox driver log is always forced to to: C:\Projetos\SuiteTeste(TocaObra)\result\geckodriver-2.log</msg>
+<status status="PASS" starttime="20201117 18:03:20.552" endtime="20201117 18:03:31.303"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201022 13:48:54.061" endtime="20201022 13:48:54.068"></status>
+<status status="PASS" starttime="20201117 18:03:31.303" endtime="20201117 18:03:31.311"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:45.998" endtime="20201022 13:48:54.068"></status>
+<status status="PASS" starttime="20201117 18:03:20.551" endtime="20201117 18:03:31.311"></status>
 </kw>
-<kw name="Dado que estou na página home do site">
-<kw name="Acessar a página home do site" library="ResourceTocaObra">
+<kw name="Dado que estou na página home do login">
+<kw name="Acessar a página de login do site (Rivesa)" library="ResourceLogin">
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
-<arg>${URL}</arg>
+<arg>${URL-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:48:54.071" level="INFO">Opening url 'https://tocaobra.sandbox.clubecdp.com.br'</msg>
-<status status="PASS" starttime="20201022 13:48:54.070" endtime="20201022 13:49:00.288"></status>
+<msg timestamp="20201117 18:03:31.314" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/login?targetUri=%2F'</msg>
+<status status="PASS" starttime="20201117 18:03:31.314" endtime="20201117 18:03:34.176"></status>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>Toca Obra</arg>
-</arguments>
-<msg timestamp="20201022 13:49:00.305" level="INFO">Page title is 'Toca Obra'.</msg>
-<status status="PASS" starttime="20201022 13:49:00.289" endtime="20201022 13:49:00.305"></status>
+<status status="PASS" starttime="20201117 18:03:31.313" endtime="20201117 18:03:34.176"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:54.070" endtime="20201022 13:49:00.306"></status>
+<status status="PASS" starttime="20201117 18:03:31.312" endtime="20201117 18:03:34.177"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:54.069" endtime="20201022 13:49:00.306"></status>
-</kw>
-<kw name="Quando eu selecionar um produto">
-<kw name="Seleciona um produto" library="ResourceTocaObra">
+<kw name="Quando selecionar o link &quot;Login&quot;">
+<kw name="Clicar na opção de &quot;Login&quot; (Rivesa)" library="ResourceLogin">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${SEL-PROD}</arg>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:49:00.308" level="INFO">Clicking element 'css=#wrapper &gt; div.highlight-products-section &gt; div.go-home-container.clearfix.container &gt; div &gt; div &gt; div &gt; div &gt; div.owl-stage-outer &gt; div &gt; div:nth-child(2)'.</msg>
-<status status="PASS" starttime="20201022 13:49:00.308" endtime="20201022 13:49:03.222"></status>
+<msg timestamp="20201117 18:03:34.180" level="INFO">Clicking element 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:03:34.179" endtime="20201117 18:03:34.440"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:49:00.307" endtime="20201022 13:49:03.222"></status>
+<status status="PASS" starttime="20201117 18:03:34.179" endtime="20201117 18:03:34.440"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:49:00.307" endtime="20201022 13:49:03.223"></status>
-</kw>
-<kw name="Então sistema direciona para página do produto">
-<kw name="Verifica página de ficha do produto" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:03.226" endtime="20201022 13:49:03.239"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${TEXT-PRODUTO}</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:03.239" endtime="20201022 13:49:03.593"></status>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<arguments>
-<arg>${DETALHES}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:03.753" level="INFO">Current page contains element 'id: detalhes'.</msg>
-<status status="PASS" starttime="20201022 13:49:03.593" endtime="20201022 13:49:03.753"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:03.225" endtime="20201022 13:49:03.754"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:03.225" endtime="20201022 13:49:03.754"></status>
-</kw>
-<kw name="Quando eu seleciona botão &quot;Adicionar ao Carrinho&quot;">
-<kw name="Seleciona o botão &quot;Adicionar ao Carrinho&quot;" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:03.761" endtime="20201022 13:49:03.802"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BUTTON-ACEITE}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:03.803" level="INFO">Clicking element 'id: div-cookieTerms-float-button'.</msg>
-<status status="PASS" starttime="20201022 13:49:03.803" endtime="20201022 13:49:04.303"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${ADD-CARRINHO}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:04.304" level="INFO">Clicking element 'xpath=//*[@id="button-add-to-cart"]'.</msg>
-<status status="PASS" starttime="20201022 13:49:04.303" endtime="20201022 13:49:08.807"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:03.760" endtime="20201022 13:49:08.807"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:03.759" endtime="20201022 13:49:08.807"></status>
-</kw>
-<kw name="Então sistema direciona para página de Carrinho">
-<kw name="Verifica página do Carrinho" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:08.809" endtime="20201022 13:49:08.816"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="content"]/div[1]/h3/div</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:08.816" endtime="20201022 13:49:08.890"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:08.808" endtime="20201022 13:49:08.891"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:08.808" endtime="20201022 13:49:08.891"></status>
-</kw>
-<kw name="Quando eu seleciona botão &quot;Finalizar Compra&quot;">
-<kw name="Seleciona o botão &quot;Finalizar Compra&quot;" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:08.893" endtime="20201022 13:49:08.898"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=/html/body/div[1]/footer/article/form/input[1]</arg>
-</arguments>
-<msg timestamp="20201022 13:49:08.898" level="INFO">Clicking element 'xpath=/html/body/div[1]/footer/article/form/input[1]'.</msg>
-<status status="PASS" starttime="20201022 13:49:08.898" endtime="20201022 13:49:09.152"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:09.153" endtime="20201022 13:49:09.161"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOT-FRETE}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:09.163" level="INFO">Clicking element 'xpath=/html/body/div[1]/main/div/div[2]/form/div/div[2]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201022 13:49:09.162" endtime="20201022 13:49:11.637"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:08.893" endtime="20201022 13:49:11.638"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:08.892" endtime="20201022 13:49:11.638"></status>
+<status status="PASS" starttime="20201117 18:03:34.178" endtime="20201117 18:03:34.440"></status>
 </kw>
 <kw name="Então direciona o cliente para a página de login">
-<kw name="Verifica a página de login" library="ResourceTocaObra">
+<kw name="Verifica a página de login (Rivesa)" library="ResourceLogin">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>15 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20201022 13:49:11.641" endtime="20201022 13:49:11.673"></status>
+<status status="PASS" starttime="20201117 18:03:34.442" endtime="20201117 18:03:34.446"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>id: loginForm</arg>
 </arguments>
-<status status="PASS" starttime="20201022 13:49:11.673" endtime="20201022 13:49:11.754"></status>
+<status status="PASS" starttime="20201117 18:03:34.446" endtime="20201117 18:03:34.483"></status>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
 <arguments>
-<arg>xpath=//*[@id="login"]/div/a/img[@src="${IMG-LOGO}"]</arg>
+<arg>xpath=//*[@id="login"]/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
 </arguments>
-<msg timestamp="20201022 13:49:11.792" level="INFO">Current page contains image 'xpath=//*[@id="login"]/div/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/toca-obra.jpg"]'.</msg>
-<status status="PASS" starttime="20201022 13:49:11.754" endtime="20201022 13:49:11.792"></status>
+<msg timestamp="20201117 18:03:34.493" level="INFO">Current page contains image 'xpath=//*[@id="login"]/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:34.483" endtime="20201117 18:03:34.493"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:49:11.640" endtime="20201022 13:49:11.792"></status>
+<status status="PASS" starttime="20201117 18:03:34.441" endtime="20201117 18:03:34.494"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:49:11.639" endtime="20201022 13:49:11.792"></status>
+<status status="PASS" starttime="20201117 18:03:34.441" endtime="20201117 18:03:34.494"></status>
 </kw>
-<kw name="Quando informo os dados do login">
-<kw name="Informe campo Email" library="ResourceTocaObra">
+<kw name="Quando informo os dados do login com CPF com mascara">
+<kw name="Informe campo CPF com mascara (Rivesa)" library="ResourceLogin">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
+<arg>${CPF-MASC-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:34.495" level="INFO">Typing text '521.099.660-33' into text field 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:03:34.495" endtime="20201117 18:03:34.523"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:34.495" endtime="20201117 18:03:34.524"></status>
+</kw>
+<kw name="Informe campo Senha CPF (Rivesa)" library="ResourceLogin">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${CAMPO-EMAIL}</arg>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:49:11.793" level="INFO">Clicking element 'xpath=//*[@id="username"]'.</msg>
-<status status="PASS" starttime="20201022 13:49:11.793" endtime="20201022 13:49:12.038"></status>
+<msg timestamp="20201117 18:03:34.527" level="INFO">Clicking element 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:03:34.526" endtime="20201117 18:03:34.743"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${CAMPO-EMAIL}</arg>
-<arg>${EMAIL}</arg>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
+<arg>${SENHA-RIVESA}</arg>
 </arguments>
-<msg timestamp="20201022 13:49:12.039" level="INFO">Typing text 'jsobrinho87@gmail.com' into text field 'xpath=//*[@id="username"]'.</msg>
-<status status="PASS" starttime="20201022 13:49:12.038" endtime="20201022 13:49:12.147"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:11.793" endtime="20201022 13:49:12.147"></status>
-</kw>
-<kw name="Informe campo Senha" library="ResourceTocaObra">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CAMPO-SENHA}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:12.149" level="INFO">Clicking element 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20201022 13:49:12.148" endtime="20201022 13:49:12.398"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${CAMPO-SENHA}</arg>
-<arg>${SENHA}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:12.399" level="INFO">Typing text 'testecws' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20201022 13:49:12.398" endtime="20201022 13:49:12.480"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:12.148" endtime="20201022 13:49:12.480"></status>
-</kw>
-<kw name="Seleciona botão &quot;Fazer login&quot;" library="ResourceTocaObra">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOTAO-LOGIN}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:12.482" level="INFO">Clicking element 'xpath=//*[@id="submit"]'.</msg>
-<status status="PASS" starttime="20201022 13:49:12.481" endtime="20201022 13:49:12.859"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:12.480" endtime="20201022 13:49:12.860"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:11.793" endtime="20201022 13:49:12.860"></status>
-</kw>
-<kw name="Então sistema direciona para página de Carrinho logado">
-<kw name="Verifica página logado carrinho" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:12.863" endtime="20201022 13:49:12.868"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="content"]/div[1]/h3/div</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:12.868" endtime="20201022 13:49:22.560"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:12.862" endtime="20201022 13:49:22.560"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:12.862" endtime="20201022 13:49:22.561"></status>
-</kw>
-<kw name="Quando eu seleciona botão &quot;Finalizar Compra&quot;">
-<kw name="Seleciona o botão &quot;Finalizar Compra&quot;" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:22.563" endtime="20201022 13:49:22.572"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=/html/body/div[1]/footer/article/form/input[1]</arg>
-</arguments>
-<msg timestamp="20201022 13:49:22.573" level="INFO">Clicking element 'xpath=/html/body/div[1]/footer/article/form/input[1]'.</msg>
-<status status="PASS" starttime="20201022 13:49:22.572" endtime="20201022 13:49:23.182"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:23.182" endtime="20201022 13:49:23.189"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOT-FRETE}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:23.189" level="INFO">Clicking element 'xpath=/html/body/div[1]/main/div/div[2]/form/div/div[2]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201022 13:49:23.189" endtime="20201022 13:49:26.755"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:22.562" endtime="20201022 13:49:26.755"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:22.561" endtime="20201022 13:49:26.755"></status>
-</kw>
-<kw name="Então sistema direciona para página de Escolha o frete">
-<kw name="Verifica página de Escolha o frete" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:26.758" endtime="20201022 13:49:26.762"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOT-FORMA-ENTR}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:26.763" level="INFO">Clicking element 'xpath=/html/body/div[1]/main/form/div[1]/div[2]/div/div[2]/div/div[1]/label/input'.</msg>
-<status status="PASS" starttime="20201022 13:49:26.763" endtime="20201022 13:49:27.103"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:26.757" endtime="20201022 13:49:27.104"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:26.756" endtime="20201022 13:49:27.104"></status>
-</kw>
-<kw name="Quando eu seleciona botão &quot;Ir para forma de pagamento&quot;">
-<kw name="Seleciona o botão &quot;Ir para forma de pagamento&quot;" library="ResourceTocaObra">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>id: order-resume</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:27.106" endtime="20201022 13:49:27.138"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>id: singleFooter</arg>
-</arguments>
-<msg timestamp="20201022 13:49:27.138" level="INFO">Clicking element 'id: singleFooter'.</msg>
-<status status="PASS" starttime="20201022 13:49:27.138" endtime="20201022 13:49:27.378"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOT-FORMA-PAG}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:27.380" level="INFO">Clicking element 'id: finalize-payment'.</msg>
-<status status="PASS" starttime="20201022 13:49:27.379" endtime="20201022 13:49:33.046"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:27.105" endtime="20201022 13:49:33.047"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:27.105" endtime="20201022 13:49:33.048"></status>
-</kw>
-<kw name="Então sistema direciona para página de forma de pagamento">
-<kw name="Verifica página de forma de pagamento" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>120 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:33.055" endtime="20201022 13:49:33.079"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="template"]/div[1]/div/div</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:33.079" endtime="20201022 13:49:33.198"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:33.052" endtime="20201022 13:49:33.198"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:33.051" endtime="20201022 13:49:33.199"></status>
-</kw>
-<kw name="Quando eu seleciona aba &quot;Boleto Bancário&quot; e finaliza compra">
-<kw name="Seleciona aba &quot;Boleto Bancário&quot; e finaliza compra" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>120 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:33.201" endtime="20201022 13:49:33.206"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${BOLETO-BANC}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:33.207" level="INFO">Clicking element 'id: boleto-tab'.</msg>
-<status status="PASS" starttime="20201022 13:49:33.206" endtime="20201022 13:49:33.509"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>id: singleFooter</arg>
-</arguments>
-<msg timestamp="20201022 13:49:33.509" level="INFO">Clicking element 'id: singleFooter'.</msg>
-<status status="PASS" starttime="20201022 13:49:33.509" endtime="20201022 13:49:33.753"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:33.753" endtime="20201022 13:49:33.762"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${FINAL-PEDIDO}</arg>
-</arguments>
-<msg timestamp="20201022 13:49:33.763" level="INFO">Clicking element 'xpath=//*[@id="template"]/div[1]/div[1]/section/div[2]/a'.</msg>
-<status status="PASS" starttime="20201022 13:49:33.762" endtime="20201022 13:49:34.198"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:33.200" endtime="20201022 13:49:34.199"></status>
-</kw>
-<status status="PASS" starttime="20201022 13:49:33.199" endtime="20201022 13:49:34.199"></status>
-</kw>
-<kw name="Então sistema direciona para página de Sucesso">
-<kw name="Verifica página de sucesso" library="ResourceTocaObra">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>15 seconds</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:34.202" endtime="20201022 13:49:34.206"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="wrapper"]/main/div[1]/div[1]/div/div/div[2]/h2</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:34.206" endtime="20201022 13:49:37.853"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@id="wrapper"]/main/div[1]/div[1]/div/div/div[2]/p[1]/strong</arg>
-</arguments>
-<status status="PASS" starttime="20201022 13:49:37.853" endtime="20201022 13:49:37.919"></status>
+<msg timestamp="20201117 18:03:34.744" level="INFO">Typing text '123456' into text field 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:03:34.744" endtime="20201117 18:03:34.763"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20201022 13:49:38.523" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201022 13:49:37.920" endtime="20201022 13:49:38.523"></status>
+<msg timestamp="20201117 18:03:34.827" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201117 18:03:34.763" endtime="20201117 18:03:34.827"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:49:34.201" endtime="20201022 13:49:38.523"></status>
+<status status="PASS" starttime="20201117 18:03:34.524" endtime="20201117 18:03:34.827"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:49:34.201" endtime="20201022 13:49:38.524"></status>
+<kw name="Seleciona botão &quot;Fazer login&quot; (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO-LOGIN-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:34.829" level="INFO">Clicking element 'xpath=//*[@id="submit"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:34.828" endtime="20201117 18:03:35.084"></status>
 </kw>
-<kw name="Fechar navegador" library="ResourceTocaObra" type="teardown">
+<status status="PASS" starttime="20201117 18:03:34.828" endtime="20201117 18:03:35.084"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:34.494" endtime="20201117 18:03:35.084"></status>
+</kw>
+<kw name="Então sistema direciona para página home">
+<kw name="Verifica página logado Home (Rivesa)" library="ResourceLogin">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:35.085" endtime="20201117 18:03:35.089"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrapper"]/header/nav[3]</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:35.090" endtime="20201117 18:03:37.839"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
+</arguments>
+<msg timestamp="20201117 18:03:37.877" level="INFO">Current page contains image 'xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:37.839" endtime="20201117 18:03:37.877"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:35.085" endtime="20201117 18:03:37.877"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:35.085" endtime="20201117 18:03:37.877"></status>
+</kw>
+<kw name="Então acessa a página meu perfil">
+<kw name="Acessar a página de meu perfil (Rivesa)" library="ResourceLogin">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL-RIVESA-PERFIL}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:37.880" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/minha-conta/meu-perfil'</msg>
+<status status="PASS" starttime="20201117 18:03:37.879" endtime="20201117 18:03:44.760"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:44.760" endtime="20201117 18:03:44.764"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:37.879" endtime="20201117 18:03:44.764"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:37.878" endtime="20201117 18:03:44.764"></status>
+</kw>
+<kw name="Quando seleciona botão de sair">
+<kw name="Seleciona opção de sair (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO-SAIR-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:44.766" level="INFO">Clicking element 'xpath=/html/body/div/div/header/div/div[1]/div[3]/form/button'.</msg>
+<status status="PASS" starttime="20201117 18:03:44.766" endtime="20201117 18:03:49.723"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:49.724" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/login?targetUri=%2F'</msg>
+<status status="PASS" starttime="20201117 18:03:49.723" endtime="20201117 18:03:50.561"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:44.765" endtime="20201117 18:03:50.562"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:44.765" endtime="20201117 18:03:50.562"></status>
+</kw>
+<kw name="Quando selecionar o link &quot;Login&quot;">
+<kw name="Clicar na opção de &quot;Login&quot; (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:50.565" level="INFO">Clicking element 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:03:50.564" endtime="20201117 18:03:50.790"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:50.564" endtime="20201117 18:03:50.790"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:50.563" endtime="20201117 18:03:50.790"></status>
+</kw>
+<kw name="Então direciona o cliente para a página de login">
+<kw name="Verifica a página de login (Rivesa)" library="ResourceLogin">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:50.794" endtime="20201117 18:03:50.799"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id: loginForm</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:50.799" endtime="20201117 18:03:50.833"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="login"]/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
+</arguments>
+<msg timestamp="20201117 18:03:50.845" level="INFO">Current page contains image 'xpath=//*[@id="login"]/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:50.833" endtime="20201117 18:03:50.845"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:50.793" endtime="20201117 18:03:50.845"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:50.792" endtime="20201117 18:03:50.845"></status>
+</kw>
+<kw name="Quando informo os dados do login com CPF sem mascara">
+<kw name="Informe campo CPF sem mascara (Rivesa)" library="ResourceLogin">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
+<arg>${CPF-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:50.847" level="INFO">Typing text '52109966033' into text field 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:03:50.847" endtime="20201117 18:03:50.873"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:50.846" endtime="20201117 18:03:50.873"></status>
+</kw>
+<kw name="Informe campo Senha CPF (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:50.876" level="INFO">Clicking element 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:03:50.875" endtime="20201117 18:03:51.098"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
+<arg>${SENHA-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:51.100" level="INFO">Typing text '123456' into text field 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:03:51.099" endtime="20201117 18:03:51.129"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201117 18:03:51.195" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201117 18:03:51.129" endtime="20201117 18:03:51.195"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:50.874" endtime="20201117 18:03:51.195"></status>
+</kw>
+<kw name="Seleciona botão &quot;Fazer login&quot; (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO-LOGIN-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:51.196" level="INFO">Clicking element 'xpath=//*[@id="submit"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:51.196" endtime="20201117 18:03:51.424"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:51.195" endtime="20201117 18:03:51.424"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:50.846" endtime="20201117 18:03:51.424"></status>
+</kw>
+<kw name="Então sistema direciona para página home">
+<kw name="Verifica página logado Home (Rivesa)" library="ResourceLogin">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:51.428" endtime="20201117 18:03:51.442"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrapper"]/header/nav[3]</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:51.442" endtime="20201117 18:03:52.699"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
+</arguments>
+<msg timestamp="20201117 18:03:52.792" level="INFO">Current page contains image 'xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:03:52.700" endtime="20201117 18:03:52.792"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:51.428" endtime="20201117 18:03:52.792"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:51.427" endtime="20201117 18:03:52.793"></status>
+</kw>
+<kw name="Então acessa a página meu perfil">
+<kw name="Acessar a página de meu perfil (Rivesa)" library="ResourceLogin">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL-RIVESA-PERFIL}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:52.795" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/minha-conta/meu-perfil'</msg>
+<status status="PASS" starttime="20201117 18:03:52.795" endtime="20201117 18:03:54.232"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:54.232" endtime="20201117 18:03:54.235"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:52.794" endtime="20201117 18:03:54.236"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:52.793" endtime="20201117 18:03:54.236"></status>
+</kw>
+<kw name="Então valida página de sucesso">
+<kw name="Valida página de sucesso (Rivesa)" library="ResourceLogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div/div/div/header/h1</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:54.239" endtime="20201117 18:03:55.432"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div/div/div/section/div</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:03:55.433" endtime="20201117 18:03:55.476"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201117 18:03:55.623" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201117 18:03:55.477" endtime="20201117 18:03:55.623"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:54.238" endtime="20201117 18:03:55.624"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:54.237" endtime="20201117 18:03:55.624"></status>
+</kw>
+<kw name="Fechar navegador" library="ResourceLogin" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201022 13:49:38.530" endtime="20201022 13:49:39.873"></status>
+<status status="PASS" starttime="20201117 18:03:55.625" endtime="20201117 18:03:57.051"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:49:38.529" endtime="20201022 13:49:39.874"></status>
+<status status="PASS" starttime="20201117 18:03:55.625" endtime="20201117 18:03:57.051"></status>
 </kw>
-<status status="PASS" starttime="20201022 13:48:45.996" endtime="20201022 13:49:39.874" critical="yes"></status>
+<status status="PASS" starttime="20201117 18:03:20.550" endtime="20201117 18:03:57.051" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201022 13:47:39.439" endtime="20201022 13:49:39.879"></status>
+<test id="s1-t3" name="Cenário 03: Login de acesso Rivesa com CNPJ">
+<kw name="Abrir navegador" library="ResourceLogin" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER-FIREFOX}</arg>
+</arguments>
+<msg timestamp="20201117 18:03:57.057" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20201117 18:03:57.058" level="INFO">Firefox driver log is always forced to to: C:\Projetos\SuiteTeste(TocaObra)\result\geckodriver-3.log</msg>
+<status status="PASS" starttime="20201117 18:03:57.057" endtime="20201117 18:04:05.605"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201117 18:04:05.606" endtime="20201117 18:04:05.637"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:57.056" endtime="20201117 18:04:05.637"></status>
+</kw>
+<kw name="Dado que estou na página home do login">
+<kw name="Acessar a página de login do site (Rivesa)" library="ResourceLogin">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:05.642" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/login?targetUri=%2F'</msg>
+<status status="PASS" starttime="20201117 18:04:05.641" endtime="20201117 18:04:08.682"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:05.641" endtime="20201117 18:04:08.682"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:05.640" endtime="20201117 18:04:08.683"></status>
+</kw>
+<kw name="Quando selecionar o link &quot;Login&quot;">
+<kw name="Clicar na opção de &quot;Login&quot; (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:08.687" level="INFO">Clicking element 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:04:08.686" endtime="20201117 18:04:08.936"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:08.685" endtime="20201117 18:04:08.937"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:08.685" endtime="20201117 18:04:08.937"></status>
+</kw>
+<kw name="Então direciona o cliente para a página de login">
+<kw name="Verifica a página de login (Rivesa)" library="ResourceLogin">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:08.944" endtime="20201117 18:04:08.948"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id: loginForm</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:08.948" endtime="20201117 18:04:08.986"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="login"]/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
+</arguments>
+<msg timestamp="20201117 18:04:08.995" level="INFO">Current page contains image 'xpath=//*[@id="login"]/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:04:08.986" endtime="20201117 18:04:08.996"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:08.943" endtime="20201117 18:04:08.996"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:08.942" endtime="20201117 18:04:08.996"></status>
+</kw>
+<kw name="Quando informo os dados do login com CNPJ com mascara">
+<kw name="Informe campo CNPJ com mascara (Rivesa)" library="ResourceLogin">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
+<arg>${CNPJ-MASC-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:08.998" level="INFO">Typing text '75.642.256/0003-63' into text field 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:04:08.997" endtime="20201117 18:04:09.048"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:08.997" endtime="20201117 18:04:09.048"></status>
+</kw>
+<kw name="Informe campo Senha CNPJ (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:09.050" level="INFO">Clicking element 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:04:09.049" endtime="20201117 18:04:09.276"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
+<arg>${SENHA-CNPJ-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:09.277" level="INFO">Typing text 'mudar123!' into text field 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:04:09.277" endtime="20201117 18:04:09.317"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201117 18:04:09.402" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201117 18:04:09.317" endtime="20201117 18:04:09.402"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:09.048" endtime="20201117 18:04:09.403"></status>
+</kw>
+<kw name="Seleciona botão &quot;Fazer login&quot; (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO-LOGIN-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:09.403" level="INFO">Clicking element 'xpath=//*[@id="submit"]'.</msg>
+<status status="PASS" starttime="20201117 18:04:09.403" endtime="20201117 18:04:09.642"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:09.403" endtime="20201117 18:04:09.642"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:08.997" endtime="20201117 18:04:09.642"></status>
+</kw>
+<kw name="Então sistema direciona para página home">
+<kw name="Verifica página logado Home (Rivesa)" library="ResourceLogin">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:09.646" endtime="20201117 18:04:09.661"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrapper"]/header/nav[3]</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:09.661" endtime="20201117 18:04:12.413"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
+</arguments>
+<msg timestamp="20201117 18:04:12.454" level="INFO">Current page contains image 'xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:04:12.413" endtime="20201117 18:04:12.455"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:09.645" endtime="20201117 18:04:12.456"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:09.645" endtime="20201117 18:04:12.457"></status>
+</kw>
+<kw name="Então acessa a página meu perfil">
+<kw name="Acessar a página de meu perfil (Rivesa)" library="ResourceLogin">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL-RIVESA-PERFIL}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:12.465" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/minha-conta/meu-perfil'</msg>
+<status status="PASS" starttime="20201117 18:04:12.464" endtime="20201117 18:04:16.193"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:16.194" endtime="20201117 18:04:16.219"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:12.463" endtime="20201117 18:04:16.219"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:12.462" endtime="20201117 18:04:16.220"></status>
+</kw>
+<kw name="Quando seleciona botão de sair">
+<kw name="Seleciona opção de sair (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO-SAIR-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:16.226" level="INFO">Clicking element 'xpath=/html/body/div/div/header/div/div[1]/div[3]/form/button'.</msg>
+<status status="PASS" starttime="20201117 18:04:16.225" endtime="20201117 18:04:20.567"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:20.567" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/login?targetUri=%2F'</msg>
+<status status="PASS" starttime="20201117 18:04:20.567" endtime="20201117 18:04:21.433"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:16.224" endtime="20201117 18:04:21.434"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:16.222" endtime="20201117 18:04:21.434"></status>
+</kw>
+<kw name="Quando selecionar o link &quot;Login&quot;">
+<kw name="Clicar na opção de &quot;Login&quot; (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:21.437" level="INFO">Clicking element 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:04:21.437" endtime="20201117 18:04:21.688"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:21.436" endtime="20201117 18:04:21.689"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:21.435" endtime="20201117 18:04:21.689"></status>
+</kw>
+<kw name="Então direciona o cliente para a página de login">
+<kw name="Verifica a página de login (Rivesa)" library="ResourceLogin">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:21.692" endtime="20201117 18:04:21.697"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id: loginForm</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:21.698" endtime="20201117 18:04:21.758"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="login"]/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
+</arguments>
+<msg timestamp="20201117 18:04:21.770" level="INFO">Current page contains image 'xpath=//*[@id="login"]/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:04:21.759" endtime="20201117 18:04:21.770"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:21.691" endtime="20201117 18:04:21.770"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:21.691" endtime="20201117 18:04:21.771"></status>
+</kw>
+<kw name="Quando informo os dados do login com CNPJ sem mascara">
+<kw name="Informe campo CNPJ sem mascara (Rivesa)" library="ResourceLogin">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-LOGIN-RIVESA}</arg>
+<arg>${CNPJ-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:21.775" level="INFO">Typing text '75642256000363' into text field 'id: username'.</msg>
+<status status="PASS" starttime="20201117 18:04:21.775" endtime="20201117 18:04:21.811"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:21.774" endtime="20201117 18:04:21.812"></status>
+</kw>
+<kw name="Informe campo Senha CNPJ (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:21.813" level="INFO">Clicking element 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:04:21.813" endtime="20201117 18:04:22.035"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO-SENHA-RIVESA}</arg>
+<arg>${SENHA-CNPJ-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:22.035" level="INFO">Typing text 'mudar123!' into text field 'id: password'.</msg>
+<status status="PASS" starttime="20201117 18:04:22.035" endtime="20201117 18:04:22.055"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201117 18:04:22.127" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201117 18:04:22.055" endtime="20201117 18:04:22.127"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:21.812" endtime="20201117 18:04:22.127"></status>
+</kw>
+<kw name="Seleciona botão &quot;Fazer login&quot; (Rivesa)" library="ResourceLogin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO-LOGIN-RIVESA}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:22.128" level="INFO">Clicking element 'xpath=//*[@id="submit"]'.</msg>
+<status status="PASS" starttime="20201117 18:04:22.128" endtime="20201117 18:04:22.365"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:22.127" endtime="20201117 18:04:22.365"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:21.773" endtime="20201117 18:04:22.366"></status>
+</kw>
+<kw name="Então sistema direciona para página home">
+<kw name="Verifica página logado Home (Rivesa)" library="ResourceLogin">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:22.368" endtime="20201117 18:04:22.379"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrapper"]/header/nav[3]</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:22.379" endtime="20201117 18:04:28.052"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="${IMG-LOGO-RIVESA}"]</arg>
+</arguments>
+<msg timestamp="20201117 18:04:28.160" level="INFO">Current page contains image 'xpath=//*[@id="wrapper"]/header/nav[2]/div/div/nav/h1/a/img[@src="https://images.sandbox.canaldapeca.com.br/fornecedores/m/rivesa-sa.jpg"]'.</msg>
+<status status="PASS" starttime="20201117 18:04:28.053" endtime="20201117 18:04:28.160"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:22.368" endtime="20201117 18:04:28.161"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:22.367" endtime="20201117 18:04:28.161"></status>
+</kw>
+<kw name="Então acessa a página meu perfil">
+<kw name="Acessar a página de meu perfil (Rivesa)" library="ResourceLogin">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL-RIVESA-PERFIL}</arg>
+</arguments>
+<msg timestamp="20201117 18:04:28.164" level="INFO">Opening url 'https://rivesa.sandbox.clubecdp.com.br/minha-conta/meu-perfil'</msg>
+<status status="PASS" starttime="20201117 18:04:28.163" endtime="20201117 18:04:29.755"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:29.755" endtime="20201117 18:04:29.762"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:28.163" endtime="20201117 18:04:29.763"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:28.162" endtime="20201117 18:04:29.763"></status>
+</kw>
+<kw name="Então valida página de sucesso">
+<kw name="Valida página de sucesso (Rivesa)" library="ResourceLogin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div/div/div/header/h1</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:29.764" endtime="20201117 18:04:30.926"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div/div/div/section/div</arg>
+</arguments>
+<status status="PASS" starttime="20201117 18:04:30.927" endtime="20201117 18:04:30.969"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201117 18:04:31.089" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201117 18:04:30.969" endtime="20201117 18:04:31.089"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:29.764" endtime="20201117 18:04:31.089"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:29.763" endtime="20201117 18:04:31.089"></status>
+</kw>
+<kw name="Fechar navegador" library="ResourceLogin" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201117 18:04:31.090" endtime="20201117 18:04:32.657"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:04:31.090" endtime="20201117 18:04:32.657"></status>
+</kw>
+<status status="PASS" starttime="20201117 18:03:57.053" endtime="20201117 18:04:32.658" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201117 18:02:46.361" endtime="20201117 18:04:32.664"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0">Critical Tests</stat>
-<stat pass="2" fail="0">All Tests</stat>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="TestSiteTocaObra">TestSiteTocaObra</stat>
+<stat pass="3" fail="0" id="s1" name="TestLoginRivesa">TestLoginRivesa</stat>
 </suite>
 </statistics>
 <errors>

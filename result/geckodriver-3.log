@@ -1,0 +1,11 @@
+1605647040119	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jsobr\\AppData\\Local\\Temp\\rust_mozprofileYGK59l"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605647045268	Marionette	INFO	Listening on port 54632
+1605647045407	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://rivesa.sandbox.clubecdp.com.br/, line 1929: TypeError: window.cwsChat is not a function
+1605647071091	Marionette	INFO	Stopped listening on port 54632
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

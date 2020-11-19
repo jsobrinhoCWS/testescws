@@ -15,16 +15,20 @@ ${TEXT-PRODUTO}     xpath=//*[@id="tab-content"]
 ${IMG-PROD}         https://images.sandbox.canaldapeca.com.br/produtos/g/28/81/chuveiro-acqua-storm-ultra-black-7800w-220v-6578128-1577467895156.jpg
 ${DETALHES}         id: detalhes
 ${BUTTON-ACEITE}    id: div-cookieTerms-float-button
-${ADD-CARRINHO}     xpath=//*[@id="button-add-to-cart"]
+${ADD-CARRINHO}     id: button-add-to-cart
 ${ADD-PROD}         xpath=//*[@id="content"]/div[2]/form/div/div[2]/div[1]/a
-${SEL-PROD}         css=#wrapper > div.highlight-products-section > div.go-home-container.clearfix.container > div > div > div > div > div.owl-stage-outer > div > div:nth-child(2)
+${SEL-PROD}         css=#wrapper > div.highlight-products-section > div.go-home-container.clearfix.container > div > div > div > div > div.owl-stage-outer > div > div:nth-child(2) > div > div.y-item-body
 ${SEL-CATEGORIA1}   xpath=//*[@id="wrapper"]/section/ul/li[2]/a/span[1]
 ${SEL-CATEGORIA2}   xpath=//*[@id="content"]/section/div[2]/div/div/div/div/div/div/li[2]/a/span[1]
+${SEL-CATEG1}       xpath=/html/body/div[1]/section/ul/li[4]/a/span[1]/img
+${SEL-CATEG2}       xpath=/html/body/div[1]/main/div/section/div[2]/div/div/div/div/div/div/li[3]/a/span[1]/img
 ${SEL-PROD2}        css=#div-tipo-visualizacao > div > div > div > div:nth-child(2) > div.y-image
+${SEL-PROD3}        css=#div-tipo-visualizacao > div > div > div > div:nth-child(2)
 ${BOT-FRETE}        xpath=/html/body/div[1]/main/div/div[2]/form/div/div[2]/div[2]/button
 ${BOT-CUPOM}        id: coupon-input
-${CUPOM}            Q48K69DN9QO7
+${CUPOM}            YO12TWWAYNKP
 ${BOT-APLI-CUPOM}   xpath=//*[@id="coupon-form"]/div/button
+${MENSAGEM-CUPOM}   xpath=/html/body/div[1]/main/form/div[2]/div/div/div[2]/div/div[1]/p
 ${BOT-FORMA-PAG}    id: finalize-payment
 ${BOT-FORMA-ENTR}   xpath=/html/body/div[1]/main/form/div[1]/div[2]/div/div[2]/div/div[1]/label/input
 ${BOLETO-BANC}      id: boleto-tab
@@ -42,7 +46,7 @@ Fechar navegador
 ### Ações
 Acessar a página home do site
    Go to              ${URL}
-   Title Should Be    Toca Obra
+   Title Should Be    Toca Obra - Tudo para sua obra!
 
 Clicar na opção do link "Entre"
    Click Element      ${LINK}
@@ -78,7 +82,6 @@ Verifica página de ficha do produto
 
 Seleciona o botão "Adicionar ao Carrinho"
    Set Selenium Implicit Wait       15 seconds
-   Click Element     ${BUTTON-ACEITE}
    Click Element     ${ADD-CARRINHO}
 
 Verifica página do Carrinho
@@ -102,9 +105,9 @@ Seleciona botão "Adicionar ao Carrinho 2"
    Click Element     ${ADD-CARRINHO}
 
 Seleciona um terceiro produto
-   Click Element      ${SEL-CATEG1}   xpath=//*[@id="wrapper"]/section/ul/li[1]/a/span[1]
-   Click Element      ${SEL-CATEG2}   xpath=
-   Click Element      ${SEL-PROD2}
+   Click Element      ${SEL-CATEG1}
+   Click Element      ${SEL-CATEG2}
+   Click Element      ${SEL-PROD3}
 
 Seleciona botão "Adicionar ao Carrinho 3"
    Set Selenium Implicit Wait       15 seconds
@@ -114,17 +117,21 @@ Verifica página de Escolha o frete 3
   Set Selenium Implicit Wait       15 seconds
   Click Element      ${BOT-FORMA-ENTR}
 
-Seleciona o botão "Finalizar Todas as Compra"
-    Set Selenium Implicit Wait       15 seconds
-    #   Scroll Element Into View         xpath=//*[@id="wrapper"]/footer/article
-    Click Element                    xpath=/html/body/div[1]/footer/article/form/input[1]
-    Set Selenium Implicit Wait       15 seconds
-    Click Element      ${BOT-FRETE}
+Verifica página de Escolha o frete mais produtos
+   Set Selenium Implicit Wait       15 seconds
+   Click Element      ${BOT-FORMA-ENTR}
+   Wait Until Element Is Visible    id: order-resume
+   Click Element     xpath=/html/body/div[1]/main/form/div[1]/div[2]/div/div[2]/div/div[1]/label/input
+   Click Element     xpath=/html/body/div[1]/main/form/div[1]/div[3]/div/div[2]/div/div[1]/label/input
+   Click Element     xpath=/html/body/div[1]/main/form/div[1]/div[4]/div/div[2]/div/div/label/input
+   Click Element     ${BOT-FORMA-PAG}
+
+
 ##############################
 
 Seleciona o botão "Finalizar Compra"
    Set Selenium Implicit Wait       15 seconds
-#   Scroll Element Into View         xpath=//*[@id="wrapper"]/footer/article
+#  Scroll Element Into View         xpath=//*[@id="wrapper"]/footer/article
    Click Element                    xpath=/html/body/div[1]/footer/article/form/input[1]
    Set Selenium Implicit Wait       15 seconds
    Click Element      ${BOT-FRETE}
@@ -137,16 +144,19 @@ Verifica página de Escolha o frete
    Set Selenium Implicit Wait       15 seconds
    Click Element      ${BOT-FORMA-ENTR}
 
+#Valida CUPOM valido:
 Seleciona campo de cupom de promoção
    Click Element      ${BOT-CUPOM}
 
 Verifica se o cupom é valido
    Input Text         ${BOT-CUPOM}  ${CUPOM}
    Click Element      ${BOT-APLI-CUPOM}
+   Wait Until Element Is Visible    ${MENSAGEM-CUPOM}
+###
 
 Seleciona o botão "Ir para forma de pagamento"
    Wait Until Element Is Visible    id: order-resume
-   Click Element                    id: singleFooter
+   Click Element     xpath=/html/body/div[1]/main/form/div[1]/div[2]/div/div[2]/div/div[1]/label/input
    Click Element     ${BOT-FORMA-PAG}
 
 Verifica página de forma de pagamento
@@ -156,7 +166,6 @@ Verifica página de forma de pagamento
 Seleciona aba "Boleto Bancário" e finaliza compra
    Set Selenium Implicit Wait       120 seconds
    Click Element     ${BOLETO-BANC}
-   Click Element                    id: singleFooter
    Set Selenium Implicit Wait       15 seconds
    Click Element     ${FINAL-PEDIDO}
 
