@@ -1,5 +1,5 @@
 *** Settings ***
-Resource            ./resource/Login/ResourceLogin.robot
+Resource            /home/jenkins/agent/workspace/Teste automáticos CWS/resource/Login/ResourceLogin.robot
 Test Setup          Abrir navegador
 Test Teardown       Fechar navegador
 
