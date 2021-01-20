@@ -8,7 +8,7 @@ ${BROWSER-FIREFOX}   firefox
 ##URL##
 ${URL-TOCAOBRA}     https://tocaobra.sandbox.clubecdp.com.br/login?targetUri=%2F
 ${URL-TRACBEL}      https://tracbel.sandbox.clubecdp.com.br/login?targetUri=%2F
-${URL-MARCOPOLO}    https://marcopolo-sa.stg.clubecdp.com.br/login?targetUri=%2F
+${URL-MARCOPOLO}    https://marcopolo-sa.sandbox.clubecdp.com.br/login?targetUri=%2F
 ${URL-REDEPRO}      https://rede-pro.sandbox.clubecdp.com.br/login?targetUri=%2F
 ${URL-LAVORO}       https://lavoro.sandbox.clubecdp.com.br/login?targetUri=%2F
 ${URL-RODOBENS}     https://epecas.sandbox.clubecdp.com.br/login?targetUri=%2F
@@ -39,8 +39,8 @@ ${IMG-LOGO-TRACBEL}        https://images.sandbox.canaldapeca.com.br/fornecedore
 ${CAMPO-LOGIN-TRACBEL}     id: username
 ${CAMPO-SENHA-TRACBEL}     id: password
 ${EMAIL-TRACBEL}           tracbel@tracbel.com.br
-${CPF-MASC-TRACBEL}        521.099.660-33
-${CPF-TRACBEL}             52109966033
+${CPF-MASC-TRACBEL}        565.356.276-91
+${CPF-TRACBEL}             56535627691
 ${CNPJ-MASC-TRACBEL}       77.336.554/0001-99
 ${CNPJ-TRACBEL}            77336554000199
 ${SENHA-TRACBEL}           123456
@@ -51,18 +51,18 @@ ${BOTAO-SAIR-TRACBEL}      xpath=/html/body/div/div/header/div/div[1]/div[3]/for
 ###
 
 ##ACESSOS LOGIN MARCOPOLO##
-${IMG-LOGO-MARCOPOLO}        https://images.stg.canaldapeca.com.br/fornecedores/m/marcopolo.jpg
+${IMG-LOGO-MARCOPOLO}        https://images.sandbox.canaldapeca.com.br/fornecedores/m/marcopolo.jpg
 ${CAMPO-LOGIN-MARCOPOLO}     id: username
 ${CAMPO-SENHA-MARCOPOLO}     id: password
 ${EMAIL-MARCOPOLO}           marcopolo.sp@marcopolo.com.br
-${CPF-MASC-MARCOPOLO}        521.099.660-33
-${CPF-MARCOPOLO}             52109966033
+${CPF-MASC-MARCOPOLO}        565.356.276-91
+${CPF-MARCOPOLO}             56535627691
 ${CNPJ-MASC-MARCOPOLO}       88.611.835/0006-33
 ${CNPJ-MARCOPOLO}            88611835000633
 ${SENHA-MARCOPOLO}           123456
 ${SENHA-CNPJ-MARCOPOLO}      mudar123!
 ${BOTAO-LOGIN-MARCOPOLO}     xpath=//*[@id="submit"]
-${URL-MARCOPOLO-PERFIL}      https://marcopolo-sa.stg.clubecdp.com.br/minha-conta/meu-perfil
+${URL-MARCOPOLO-PERFIL}      https://marcopolo-sa.sandbox.clubecdp.com.br/minha-conta/meu-perfil
 ${BOTAO-SAIR-MARCOPOLO}      xpath=/html/body/div/div/header/div/div[1]/div[3]/form/button
 ###
 
@@ -71,8 +71,8 @@ ${IMG-LOGO-REDEPRO}        https://images.sandbox.canaldapeca.com.br/fornecedore
 ${CAMPO-LOGIN-REDEPRO}     id: username
 ${CAMPO-SENHA-REDEPRO}     id: password
 ${EMAIL-REDEPRO}           redepro1@gmail.com
-${CPF-MASC-REDEPRO}        521.099.660-33
-${CPF-REDEPRO}             52109966033
+${CPF-MASC-REDEPRO}        565.356.276-91
+${CPF-REDEPRO}             56535627691
 ${CNPJ-MASC-REDEPRO}       33.486.955/0001-50
 ${CNPJ-REDEPRO}            33486955000150
 ${SENHA-REDEPRO}           123456
@@ -87,8 +87,8 @@ ${IMG-LOGO-LAVORO}        https://images.sandbox.canaldapeca.com.br/fornecedores
 ${CAMPO-LOGIN-LAVORO}     id: username
 ${CAMPO-SENHA-LAVORO}     id: password
 ${EMAIL-LAVORO}           henry.sakane@holdingterraverde.com.br
-${CPF-MASC-LAVORO}        521.099.660-33
-${CPF-LAVORO}             52109966033
+${CPF-MASC-LAVORO}        565.356.276-91
+${CPF-LAVORO}             56535627691
 ${CNPJ-MASC-LAVORO}       27.490.581/0001-43
 ${CNPJ-LAVORO}            27490581000143
 ${SENHA-LAVORO}           123456
@@ -103,8 +103,8 @@ ${IMG-LOGO-RODOBENS}        https://images.sandbox.canaldapeca.com.br/fornecedor
 ${CAMPO-LOGIN-RODOBENS}     id: username
 ${CAMPO-SENHA-RODOBENS}     id: password
 ${EMAIL-RODOBENS}           vc.guarulhos@rodobens.com.br
-${CPF-MASC-RODOBENS}        521.099.660-33
-${CPF-RODOBENS}             52109966033
+${CPF-MASC-RODOBENS}        565.356.276-91
+${CPF-RODOBENS}             56535627691
 ${CNPJ-MASC-RODOBENS}       60.812.088/0001-78
 ${CNPJ-RODOBENS}            60812088000178
 ${SENHA-RODOBENS}           123456
@@ -119,8 +119,8 @@ ${IMG-LOGO-RUDEGON}        https://images.sandbox.canaldapeca.com.br/fornecedore
 ${CAMPO-LOGIN-RUDEGON}     id: username
 ${CAMPO-SENHA-RUDEGON}     id: password
 ${EMAIL-RUDEGON}           fernando@rudegon.com.br
-${CPF-MASC-RUDEGON}        521.099.660-33
-${CPF-RUDEGON}             52109966033
+${CPF-MASC-RUDEGON}        565.356.276-91
+${CPF-RUDEGON}             56535627691
 ${CNPJ-MASC-RUDEGON}       79.985.479/0005-46
 ${CNPJ-RUDEGON}            79985479000546
 ${SENHA-RUDEGON}           123456
@@ -135,8 +135,8 @@ ${IMG-LOGO-RIVESA}        https://images.sandbox.canaldapeca.com.br/fornecedores
 ${CAMPO-LOGIN-RIVESA}     id: username
 ${CAMPO-SENHA-RIVESA}     id: password
 ${EMAIL-RIVESA}           campomourao@rivesa.com.br
-${CPF-MASC-RIVESA}        521.099.660-33
-${CPF-RIVESA}             52109966033
+${CPF-MASC-RIVESA}        565.356.276-91
+${CPF-RIVESA}             56535627691
 ${CNPJ-MASC-RIVESA}       75.642.256/0003-63
 ${CNPJ-RIVESA}            75642256000363
 ${SENHA-RIVESA}           123456

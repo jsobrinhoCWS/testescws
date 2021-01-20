@@ -1,5 +1,5 @@
 *** Settings ***
-Resource            ../resource/login/ResourceLogin.robot
+Resource            C:/Projetos/SuiteTeste(CWSDigital)/resource/login/ResourceLogin.robot
 Test Setup          Abrir navegador
 Test Teardown       Fechar navegador
 

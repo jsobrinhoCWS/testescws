@@ -35,7 +35,7 @@ ${BOLETO-BANC}      id: boleto-tab
 ${FINAL-PEDIDO}     xpath=//*[@id="template"]/div[1]/div[1]/section/div[2]/a
 
 *** Keywords ***
-### Setup e TEARDOWN
+### SETUP e TEARDOWN
 Abrir navegador
   Open Browser    about:blank   ${BROWSER}
   Maximize Browser Window
