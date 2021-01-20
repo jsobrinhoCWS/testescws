@@ -43,7 +43,7 @@ Abrir navegador
 Fechar navegador
   Close Browser
 
-### Ações
+### AÇÕES
 Acessar a página home do site
    Go to              ${URL}
    Title Should Be    Toca Obra - Tudo para sua obra!
